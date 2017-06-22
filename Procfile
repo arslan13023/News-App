@@ -1,1 +1,1 @@
-web: gunicorn coffeed.wsgi --log-file -
+web: gunicorn Coffeed-master.wsgi --log-file -
