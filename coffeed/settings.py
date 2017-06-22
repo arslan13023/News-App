@@ -92,6 +92,14 @@ DATABASES = {
    }
 }
 
+#parse database configuration from $database_url
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
+#honor the "forwareded proto" header for request.is_secure()
+SECURE_PROXY_SSL_HEADER  = ('HTTP_X_FORWARDED_PROTO', 'https')
+#allow all host header
+ALLOWED_HOSTS = ['*']
+
 mongoengine.connect('citizen_journalism',host='mongodb://127.0.0.1:27017')
 
 # Password validation
