@@ -1,1 +1,0 @@
-web: gunicorn Coffeed-master.wsgi --log-file -
