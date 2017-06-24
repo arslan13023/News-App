@@ -16,14 +16,15 @@ from django.db.models.query import *
 import datetime
 from django.views.decorators.csrf import csrf_exempt
 
-poll = social_content.objects.filter(text__icontains = 'sports')
+#poll = social_content.objects.filter(text__icontains = 'sports')
+#count = poll.count()
+#print count
+#count = count - 1840
+#print count 
+#a = 0
+#b = 5
 
-count = poll.count()
-print count
-count = count - 1840
-print count 
-a = 0
-b = 5
+
 def get_tweets(request):
 	global count
 	global a
